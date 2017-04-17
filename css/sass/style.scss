@@ -1,0 +1,4 @@
+@import "base.scss";
+ .element {
+     @include border-color(#a60b55 #76cd9c null #e8ae1a);
+}
