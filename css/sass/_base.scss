@@ -1,2 +1,9 @@
 @import "variables.scss";
 @import "../bourbon/_bourbon.scss";
+
+$max_width:1170px;
+$base-font-size: 16px;
+$base-line-height: 28px;
+$rhythm-unit: 'rem';
+$rem-with-px-fallback:true;
+

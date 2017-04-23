@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/print.css",
+	"sources": [
+		"../sass/print.scss"
+	],
+	"sourcesContent": [
+		""
+	],
+	"mappings": "",
+	"names": []
+}
