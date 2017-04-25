@@ -10,6 +10,8 @@
 		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="css/stylesheets/bootstrap.min.css">
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="css/stylesheets/font-awesome.min.css">
 		<!-- StyleSheet -->
 		<link rel="stylesheet" href="css/stylesheets/style.css">
 		<!-- Responsive fixes -->
@@ -44,52 +46,57 @@
 		<header>
 			<div  class="top-bar">
 				<div class="cont-content">
-					<button type="button">Donate</button>
+					<button type="button" class="donate_button">Donate</button>
 					<span class="email">info@iou.edu.gm</span>
 					
 					<div class="search-form">
-						<input type="text" >
+						<div class="input-group">
+						  <input type="text" class="form-control" placeholder="Search for.." aria-describedby="basic-addon2">
+						  <span class="input-group-addon" id="basic-addon2"><button type="submit" class="fa fa-search search-button"></button></span>
+						</div>
 					</div>
 					
 					<div class="reg-log-buttons">
-						<button type="button">Login</button>
-						<button>Register</button>
+						<button type="button" class="login_button">Login</button><button type="button" class="register_button">Register</button>
 					</div>
-
 					<div class="social-cont">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-						<i class="fa fa-google-plus" aria-hidden="true"></i>
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-						<i class="fa fa-youtube-play" aria-hidden="true"></i>
-						<i class="fa fa-instagram" aria-hidden="true"></i>	
+						<ul>
+							<li class="social-icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li class="social-icon"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li class="social-icon"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li class="social-icon"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li class="social-icon"><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+							<li class="social-icon"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
 					</div>
 				</div>	
 			</div>
 
 			<div class="main-bar">
-				<div class="logo-container">
-					<img src="" alt="Islamic Online University">
-					<div class="tag-line">
-						<h2>ISLAMIC</h2>
-						<h5>Online University</h5>
+				<div class="cont-content">
+					<div class="logo-container">
+						<img src="images/color-logo.png" alt="Islamic Online University">
+						<div class="tag-line">
+							<h2>ISLAMIC</h2>
+							<h5>Online University</h5>
+						</div>
 					</div>
-				</div>
 
-				<div class="main-menu">
-					<nav>
-						<ul>
-							<li><a href="#" title="Home">Home</a></li>
-							<li><a href="#" title="Home">Academics</a></li>
-							<li><a href="#" title="Home">Programs</a></li>
-							<li><a href="#" title="Home">Faculty</a></li>
-							<li><a href="#" title="Home">Community</a></li>
-							<li><a href="#" title="Home">Tutition Fee</a></li>
-							<li><a href="#" title="Home">About us</a></li>
-						</ul>
-					</nav>
-				</div>				
-			</div>
+					<div class="main-menu">
+							<nav>
+								<ul>
+									<li><a href="#" title="Home">Home</a></li>
+									<li><a href="#" title="Home">Academics</a></li>
+									<li><a href="#" title="Home">Programs</a></li>
+									<li><a href="#" title="Home">Faculty</a></li>
+									<li><a href="#" title="Home">Community</a></li>
+									<li><a href="#" title="Home">Tutition Fee</a></li>
+									<li><a href="#" title="Home">About us</a></li>
+								</ul>
+							</nav>
+						</div>				
+				</div>
+				</div>
 		</header>
 
 		<!-- Slider section -->
@@ -99,24 +106,27 @@
 
 		<!-- Entry content -->
 		<div class="entry-content">
-			<div class="cont-content">
-				<div class="welcome-sec">
-					<h1>Welcome To Online Islamic University</h1>
-					<p>The Islamic Online University (IOU) is the brainchild of Dr. Bilal Phililps, who envisioned an institution that would offer online, intensive, undergraduate and graduate programs completely tution-free</p>
-					<button type="button">READ MORE</button>
+			<div class="cont-content row">
+				<div class="welcome-sec col-md-6">
+					<div class="welcome-sec-content">
+						<h1>Welcome To Online Islamic University</h1>
+						<p>The Islamic Online University (IOU) is the brainchild of Dr. Bilal Phililps, who envisioned an institution that would offer online, intensive, undergraduate and graduate programs completely tution-free</p>
+						<button type="button">READ MORE</button>
+					</div>
 				</div>
 
-				<div class="news-section">
+				<div class="news-section col-md-6">
 					<h1>News & Events</h1>	
 					<div class="news-list">
-						<ul class="news-nav">
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
+						<div class="nav-cont">
+							<ul class="news-nav">
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
 
-						<ul>
-							
+						</div>
+						<ul class="news-content">
 							<li>
 								<div class="single-news">
 									<div class="news-day">
@@ -125,8 +135,8 @@
 										<span class="year">2014</span>
 									</div>
 									<div class="news-content">
-										<h6 class="news-head">New Course: The Trial</h6>
-										<p>An Islamic Approach to coping with Trials and Tribulations</p>
+										<p><span class="news-head">New Course: The Trial</span>
+										An Islamic Approach to coping with Trials and Tribulations</p>
 									</div>
 								</div>
 							</li>
@@ -139,8 +149,8 @@
 										<span class="year">2014</span>
 									</div>
 									<div class="news-content">
-										<h6 class="news-head">New Course: The Trial</h6>
-										<p>An Islamic Approach to coping with Trials and Tribulations</p>
+										<p><span class="news-head">New Course: The Trial</span>
+										An Islamic Approach to coping with Trials and Tribulations</p>
 									</div>
 								</div>
 							</li>
@@ -153,8 +163,8 @@
 										<span class="year">2014</span>
 									</div>
 									<div class="news-content">
-										<h6 class="news-head">New Course: The Trial</h6>
-										<p>An Islamic Approach to coping with Trials and Tribulations</p>
+										<p><span class="news-head">New Course: The Trial</span>
+										An Islamic Approach to coping with Trials and Tribulations</p>
 									</div>
 								</div>
 							</li>
@@ -171,123 +181,162 @@
 			<h1>GLOBALLY ACCREDITED DEGREE PROGRAMS</h1>
 			<div class="degrees">
 				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
-					</div>
-					<h3>BUSINESS ADMINISTRATION</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
-					</div>
-				</div>
-
-				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
-					</div>
-					<h3>ISLAMIC ECONOMICS, BANKING & FINANCEs</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
+					<div class="degree-bg">
+						<div class="degree-img">
+							<img src="images/degree-one.jpg" alt="BUSINESS ADMINISTRATION">
+						</div>
+						<h6>BUSINESS ADMINISTRATION</h6>
+						<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+						</div>
 					</div>
 				</div>
 
 				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
-					</div>
-					<h3>ARABIC LANGUAGE & LINGUISTICS</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
-					</div>
-				</div>
-
-				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
-					</div>
-					<h3>ISLAMIC STUDIES</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
-						<button type="button">Master Degrees >></button>
+					<div class="degree-bg">
+						<div class="degree-img">
+							<img src="images/degree-two.jpg" alt="BUSINESS ADMINISTRATION">
+						</div>
+						<h6>ISLAMIC BANKING & FINANCEs</h6>
+						<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+						</div>
 					</div>
 				</div>
 
 				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
-					</div>
-					<h3>INFORMATION TECHNOLOGY</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
-					</div>
-				</div>
-
-				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
-					</div>
-					<h3>PSYCHOLOGY</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
+					<div class="degree-bg">
+						<div class="degree-img">
+							<img src="images/degree-three.jpg" alt="BUSINESS ADMINISTRATION">
+							</div>
+							<h6>ARABIC LANGUAGE & LINGUISTICS</h6>
+							<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+							</div>
 					</div>
 				</div>
 
 				<div class="single-degree">
-					<div class="degree-img">
-						<img src="#" alt="BUSINESS ADMINISTRATION">
+					<div class="degree-bg">
+						<div class="degree-img">
+							<img src="images/degree-four.jpg" alt="BUSINESS ADMINISTRATION">
+						</div>
+						<h6>ISLAMIC STUDIES</h6>
+						<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+							<button type="button" class="button_style_two">Master Degrees >></button>
+						</div>
 					</div>
-					<h3>EDUCATION</h3>
-					<div class="degree-types">
-						<button type="button">Associate Degrees >></button>
-						<button type="button">Bachelors Degrees >></button>
+				</div>
+
+				<div class="single-degree">
+					<div class="degree-bg">
+						<div class="degree-img">
+							<img src="images/degree-five.jpg" alt="BUSINESS ADMINISTRATION">
+							</div>
+							<h6>INFORMATION TECHNOLOGY</h6>
+							<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="single-degree">
+					<div class="degree-bg">
+						<div class="degree-img">
+							<img src="images/degree-six.jpg" alt="BUSINESS ADMINISTRATION">
+							</div>
+							<h6>PSYCHOLOGY</h6>
+							<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="single-degree">
+					<div class="degree-bg">				
+						<div class="degree-img">
+							<img src="images/degree-seven.jpg" alt="BUSINESS ADMINISTRATION">
+						</div>
+						<h6>EDUCATION</h6>
+						<div class="degree-types">
+							<button type="button" class="button_style_two">Associate Degrees >></button>
+							<button type="button" class="button_style_two">Bachelors Degrees >></button>
+						</div>
 					</div>
 				</div>
 			</div><!-- Degrees -->
-			<button type="button">VIEW ALL PROGRAMS</button>
+			<div class="container-full"><button type="button" class="background_button">VIEW ALL PROGRAMS</button></div>
+			
 		</div>
 
 		<!-- Short courses section-->
 		<div class="short-courses">
-			<h2>SHORT COURSES</h2>
 			<div class="feat-courses">
 				<div class="cont-content">
 					<div class="row feat-container">
-						<div class="short-course">
-							<h4 class="course-heading">STRENGTHEN THE KNOT</h4>
-							<span>By: <a href="#">Bela Khan</a></span>
-							<div class="course-img-cont">
-								<img src="#" alt="STRENGTHEN THE KNOT">
-								<span class="rating"></span>
-								<span class="price">$ 50</span>
+						<h2>SHORT COURSES</h2>
+						<div class="col-md-4">
+							<div class="short-course">
+								<h4 class="course-heading">STRENGTHEN THE KNOT</h4>
+								<span>By: <a href="#">Bela Khan</a></span>
+								<div class="course-img-cont">
+									<img src="images/course-one.jpg" alt="STRENGTHEN THE KNOT">
+									<span class="rating">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</span>
+									<span class="price">$ 50</span>
+								</div>
+								<button type="button" class="action_button">ENROLL NOW!</button>
 							</div>
-							<button type="button">ENROLL NOW!</button>
 						</div>
 
-						<div class="short-course">
-							<h4 class="course-heading">MONEY MATTERS</h4>
-							<span>By: <a href="#">Mansoor Danish</a></span>
-							<div class="course-img-cont">
-								<img src="#" alt="STRENGTHEN THE KNOT">
-								<span class="rating"></span>
-								<span class="price">$ 30</span>
+						<div class="col-md-4">
+							<div class="short-course">
+								<h4 class="course-heading">MONEY MATTERS</h4>
+								<span>By: <a href="#">Mansoor Danish</a></span>
+								<div class="course-img-cont">
+									<img src="images/course-two.jpg" alt="STRENGTHEN THE KNOT">
+									<span class="rating">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</span>
+									<span class="price">$ 30</span>
+								</div>
+								<button type="button" class="action_button">ENROLL NOW!</button>
 							</div>
-							<button type="button">ENROLL NOW!</button>
 						</div>
 
-						<div class="short-course">
-							<h4 class="course-heading">TAJWEED MADE EASY</h4>
-							<span>By: <a href="#">IOU Faculty</a></span>
-							<div class="course-img-cont">
-								<img src="#" alt="STRENGTHEN THE KNOT">
-								<span class="rating"></span>
-								<span class="price">$ 50</span>
+						<div class="col-md-4">
+							<div class="short-course">
+								<h4 class="course-heading">TAJWEED MADE EASY</h4>
+								<span>By: <a href="#">IOU Faculty</a></span>
+								<div class="course-img-cont">
+									<img src="images/course-three.jpg" alt="STRENGTHEN THE KNOT">
+									<span class="rating">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</span>
+									<span class="price">$ 50</span>
+								</div>
+								<button type="button" class="action_button">ENROLL NOW!</button>
 							</div>
-							<button type="button">ENROLL NOW!</button>
 						</div>
 					</div><!-- feat-cont -->
 				</div><!-- cont-container -->
@@ -295,55 +344,58 @@
 		</div><!-- Short-courses -->
 
 		<!-- Webinar Section -->
-		<div class="webinars-sec">
+		<div class="webinars-sec row">
+			<div class="col-md-8 no-padding">
 			<div class="diploma-section">
 				<div class="diploma-content">
 					<h3>FREE DIPLOMA COURSES AND WEBINARS</h3>
-					<div class="diploma-posts">
+					<div class="diploma-posts col-md-10 col-md-offset-4 col-md-pull-4">
 						<div class="cat-diplomas">
 							<h3 class="diploma-head">New Muslim Free Certificate & Diploma Course</h3>
 							<div class="diploma-icon">
-								
+								<img src="images/degree-icon-one.png" alt="Free Diploma One">
 							</div>
 							<p>The New Muslim Courses explain some of the most important points that the new 
 							Muslims should be conscious of on the very first day and week of their conversion
 							to Islam</p>
-							<button type="button">VIEW COURSES</button>
+							<button type="button" class="regular_button">VIEW COURSES</button>
 						</div>
+					</div>
+					<div class="diploma-posts col-md-10 col-md-offset-4 col-md-pull-4">
 						<div class="cat-diplomas">
 							<h3 class="diploma-head">Free Islamic Studies Diploma</h3>
 							<div class="diploma-icon">
-								
+								<img src="images/degree-icon-two.png" alt="Free Diploma One">
 							</div>
 							<p>The free General Diploma in Islamic Studies courses are designed to provide a systematic and organized study experience for knowledge seekers</p>
-							<button type="button">VIEW COURSES</button>
-						</div>
-					</div><!-- diploma-posts -->	
+							<button type="button" class="regular_button">VIEW COURSES</button>
+						</div>		
+					</div>	
 
-					<div class="diploma-posts-feat">
+					<div class="diploma-posts-feat row">
 						
-						<div class="feat-posts-single">
+						<div class="feat-posts-single col-md-3">
 							<div class="feat-post-content">
 								<h5 class="feat-post-head">Eternal Bond</h5>
 								<p>Material Lessions from 40 Prophetic Traditions</p>
 							</div>
 						</div>
 						
-						<div class="feat-posts-single">
+						<div class="feat-posts-single col-md-3">
 							<div class="feat-post-content">
 								<h5 class="feat-post-head">Healing the Soul</h5>
 								<p>Material Lessions from 40 Prophetic Traditions</p>
 							</div>
 						</div>
 						
-						<div class="feat-posts-single">
+						<div class="feat-posts-single col-md-3">
 							<div class="feat-post-content">
 								<h5 class="feat-post-head">Arabic Speech</h5>
 								<p>Material Lessions from 40 Prophetic Traditions</p>
 							</div>
 						</div>
 						
-						<div class="feat-posts-single">
+						<div class="feat-posts-single col-md-3">
 							<div class="feat-post-content">
 								<h5 class="feat-post-head">Islamization</h5>
 								<p>Material Lessions from 40 Prophetic Traditions</p>
@@ -354,12 +406,14 @@
 					</div><!-- diploma-posts-feat -->
 				</div><!-- diploma-content -->
 			</div><!-- diploma-section -->
-			
+			</div><!-- col-md-8-->
+
+			<div class="col-md-4 no-padding">
 			<div class="gqmc-section">
 				<div class="gqmc-content">
 					<div class="gqmc-post">
 						<div class="post-head">
-							<img src="#" alt="GQMC LOGO">
+							<img src="images/global-quran.png" alt="GQMC LOGO">
 							<h2>GLOBAL QURAN <span>MEMORIZAtION CENTER</span></h2>
 						</div>
 						<div class="post-content">
@@ -373,24 +427,25 @@
 								<li>TAJWEED EASY STARTER</li>
 								<li>TAJWEED INTENSIVE</li>
 							</ul>
-							<button type="button">VIEW WEBSITE</button>
+							<button type="button" class="action_button">VIEW WEBSITE</button>
 						</div>
 					</div>
 				</div><!-- gqmc-content -->
 			</div><!-- gqmc-section -->
+			</div><!-- col-md-4-->
 		</div><!-- Webinar Section --> 
 
 		<!-- Perks section -->
 		<div class="perks-sec">
-			<div class="main-perks">
-				<div class="library-perk">
-					<i class="lib-icon"></i>
+			<div class="main-perks row">
+				<div class="library-perk col-md-4">
+					<div class="lib-icon"><img src="images/library-book.png" alt="IOU E-Library"></div>
 					<h3>IOU CENTRAL E-LIBRARY</h3>
 					<p>Fostering academic research, intellectual development and growth, enhancing the study experience, and enriching the minds of the students are some of the goals of the Islamic Online University.</p>
-					<button type="button">LEARN MORE</button>						
+					<button type="button" class="widget_button">Learn More</button>						
 				</div>
 
-				<div class="slider-perk">
+				<div class="slider-perk col-md-4">
 					<div class="slide-container">
 						<img src="#" alt="Slider 4">
 					</div>
@@ -407,11 +462,11 @@
 					</div>
 				</div>		
 
-				<div class="fee-perk">
-					<i class="guarantee-icon"></i>
+				<div class="fee-perk col-md-4">
+					<div class="guarantee-icon"><img src="images/guarantee.png" alt="Guarantee"></div>
 					<h3>INCREDIBLY LOW FEES</h3>
 					<p>Total Cost of a BA or BSc <br/> US $560 - US $1280 only</p>
-					<button type="button">LEARN MORE</button>		
+					<button type="button" class="widget_button">Learn More</button>		
 				</div>		
 			</div>
 		</div>
@@ -419,9 +474,9 @@
 		<!-- How to Section-->
 		<div class="how-to-container">
 			<div class="how-sec">
-				<div class="cont-content">
+				<div class="cont-content row">
 
-					<div class="video-section">
+					<div class="video-section col-md-4">
 						<div class="video-container">
 							<video src="#" autobuffer autoloop loop controls poster="/images/video.png"></video>
 						</div>
@@ -429,11 +484,11 @@
 						<p>Comprised of students from around the globe, the student body will learn through watching and listening to video and audio lectures as well as reading PDF format txts with the support of well-trained tutorial assistants.</p>
 					</div>
 
-					<div class="jumbotron-sec">
+					<div class="jumbotron-sec col-md-8">
 						<h1><span class="student-number">281,893</span>
 						Registered Students Globally
 						</h1>
-						<button type="button">Register Now</button>
+						<button type="button" class="widget_button">Register Now</button>
 					</div>
 
 				</div>
@@ -445,45 +500,57 @@
 			<div class="cont-content">
 				<div class="action-section">
 					<div class="action-content">
-						<h1 class="action-heading"><span>WE OFFER</span><span>TUITION-FREE</span><span>& COMPLETELY FREE PROGRAMS</span></h1>
-						<button type="button">LEARN MORE</button>
+						<h1 class="action_heading"><span class="left-span">WE OFFER </span><span class="free-text">TUITION-FREE </span><span class="right-span">& COMPLETELY FREE PROGRAMS</span></h1>
+						<button type="button" class="widget_button">Learn More</button>
 					</div>
 				</div>
 
 				<div class="subscribe-section">
-					<b>SUBSCRIBE TO OUT NEWSLETTER</b>
-					<input type="email" name="" value="" placeholder="Enter your email here">
-					<button type="submit">SUBSCRIBE</button>
+					<b>SUBSCRIBE TO OUR NEWSLETTER</b>
+					<input type="email" placeholder="Enter your email here">
+					<button type="submit" class="subscription_button">SUBSCRIBE</button>
 				</div>
 			</div>
 		</div><!-- Call-to-action -->
 
 		<!-- Partners section -->
-		<div class="partners-section">
+		<div class="partners-section clearfix">
 			<div class="cont-content">
 				<div class="nav-head-cont">
-					<span class="left-arrow"></span>
+					<span class="nav-left"><a href="#"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a></span>
 					<h2>PROUD MEMBER OF</h2>
-					<span class="right-arrow"></span>
+					<span class="nav-right"><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></span>
 				</div>
-				<div class="members-cont">
-					<div class="single-member">
-						<img src="#" alt="icde">
+				<div class="members-cont row">
+					<div class="col-md-2">
+						<div class="single-member">
+							<img src="images/member-one.jpg" alt="icde">
+						</div>						
 					</div>
-					<div class="single-member">
-						<img src="#" alt="AAU">
+					<div class="col-md-2">
+						<div class="single-member">
+							<img src="images/member-two.jpg" alt="AAU">
+						</div>
 					</div>
-					<div class="single-member">
-						<img src="#" alt="AAOU">
+					<div class="col-md-2">
+						<div class="single-member">
+							<img src="images/member-three.jpg" alt="AAOU">
+						</div>						
 					</div>
-					<div class="single-member">
-						<img src="#" alt="INQAAHE">
+					<div class="col-md-2">
+						<div class="single-member">
+							<img src="images/member-four.jpg" alt="INQAAHE">
+						</div>						
 					</div>
-					<div class="single-member">
-						<img src="#" alt="AfriQan">
+					<div class="col-md-2">
+						<div class="single-member">
+							<img src="images/member-five.jpg" alt="AfriQan">
+						</div>						
 					</div>
-					<div class="single-member">
-						<img src="#" alt="AQAAIW">
+					<div class="col-md-2">
+						<div class="single-member">
+							<img src="images/member-six.jpg" alt="AQAAIW">
+						</div>						
 					</div>
 				</div>				
 			</div>
@@ -491,10 +558,10 @@
 
 		<!-- Footer section -->
 		<footer>
-			<div class="cont-content">
+			<div class="cont-content row">
 				<div class="widgets-section">
 					
-					<div class="footer-widget">
+					<div class="footer-widget col-md-3">
 						<h5 class="widget-head">Quick Links</h5>
 						<ul class="footer-menu">
 							<li><a href="#">Terms and Conditions</a></li>
@@ -514,7 +581,7 @@
 						</ul>
 					</div>
 					
-					<div class="footer-widget">
+					<div class="footer-widget col-md-3">
 						<h5 class="widget-head">Student</h5>
 						<ul class="footer-menu">
 							<li><a href="#">Admission</a></li>
@@ -533,7 +600,7 @@
 						</ul>
 					</div>
 					
-					<div class="footer-widget">
+					<div class="footer-widget col-md-3">
 						<h5 class="widget-head">About Us</h5>
 						<ul class="footer-menu">
 							<li><a href="#">About</a></li>
@@ -550,7 +617,7 @@
 						</ul>
 					</div>
 
-					<div class="footer-widget">
+					<div class="footer-widget col-md-3">
 						<h5 class="widget-head">Testimonials</h5>
 						<div class="testimonials">
 							<div class="single-test">
@@ -565,55 +632,32 @@
 								<div class="cust-details">
 									Mohammed (accountant) Ehiopia
 								</div>
-							</div>
-							<div class="single-test">
-								<div class="statement">
-									Assalamu'aleykum Muslim brothers and Sisters. I am Mohammed from
-									Ethiopia. I have a BA (Accounting). I am currently working as an 
-									accountant at the Ministry of Finance and Economic Development in 
-									my country. Though a pamphlet I came to know about the IOU. 
-									Insha Allaah Muslims can benefit from it. May Allaah make the IOU
-									prosper. Jazaakumullaah Khayran. 
-								</div>
-								<div class="cust-details">
-									Mohammed (accountant) Ehiopia
-								</div>
-							</div>
-							<div class="single-test">
-								<div class="statement">
-									Assalamu'aleykum Muslim brothers and Sisters. I am Mohammed from
-									Ethiopia. I have a BA (Accounting). I am currently working as an 
-									accountant at the Ministry of Finance and Economic Development in 
-									my country. Though a pamphlet I came to know about the IOU. 
-									Insha Allaah Muslims can benefit from it. May Allaah make the IOU
-									prosper. Jazaakumullaah Khayran. 
-								</div>
-								<div class="cust-details">
-									Mohammed (accountant) Ehiopia
-								</div>
 							</div>	
 							<div class="test-nav">
-								<span class="nav-left"></span>
+								<span class="nav-left"><a href="#"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a></span>
 								|
-								<span class="nav-right"></span>
+								<span class="nav-right"><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></span>
 							</div>
 						</div>
 
-						<div class="footer-social">
-							<div class="social-cont">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-								<i class="fa fa-twitter" aria-hidden="true"></i>
-								<i class="fa fa-google-plus" aria-hidden="true"></i>
-								<i class="fa fa-linkedin" aria-hidden="true"></i>
-								<i class="fa fa-youtube-play" aria-hidden="true"></i>
-								<i class="fa fa-instagram" aria-hidden="true"></i>	
-							</div>										
-						</div>
 					</div>
 				</div>
-
-				<div class="copy-right-section">
-					Copyright &copy; 2017 ISLAMIC ONLINE UNIVERSITY. All Rights Reserved.
+				<div class="footer-last-entry col-sm-12">
+					<div class="footer-social">
+						<div class="social-cont clearfix">
+							<ul>
+								<li class="social-icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social-icon"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="social-icon"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li class="social-icon"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li class="social-icon"><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+								<li class="social-icon"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>										
+					</div>
+					<div class="copyright-section">
+						Copyright &copy; 2017 ISLAMIC ONLINE UNIVERSITY. All Rights Reserved.
+					</div>
 				</div>
 			</div>		
 		</footer>
