@@ -255,6 +255,10 @@ input{
     .single-test{
         text-align: center;
         color:$test_color;
+        transition-duration: 2s;
+        &:last-of-type{
+            margin-right: 0!important;
+        }
         .cust-details{
             color: #ffffff;
             margin-top: 16px;
@@ -677,6 +681,16 @@ img{
         .gqmc-content{
             margin-left: 20px;
             max-width: 380px;
+            .post-content{
+                h1{
+                    color:$brown_color;
+                }
+                ul{
+                    li{
+                        list-style-type:square;
+                    }
+                }
+            }
             button{
                 display: block;
                 float: right;

@@ -290,7 +290,10 @@ input {
 
 .testimonials .single-test {
   text-align: center;
-  color: #3fccf6; }
+  color: #3fccf6;
+  transition-duration: 2s; }
+  .testimonials .single-test:last-of-type {
+    margin-right: 0 !important; }
   .testimonials .single-test .cust-details {
     color: #ffffff;
     margin-top: 16px;
@@ -620,6 +623,10 @@ img {
     .webinars-sec .gqmc-section .gqmc-content {
       margin-left: 20px;
       max-width: 380px; }
+      .webinars-sec .gqmc-section .gqmc-content .post-content h1 {
+        color: #501a00; }
+      .webinars-sec .gqmc-section .gqmc-content .post-content ul li {
+        list-style-type: square; }
       .webinars-sec .gqmc-section .gqmc-content button {
         display: block;
         float: right;
