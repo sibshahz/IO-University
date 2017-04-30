@@ -435,11 +435,39 @@ header {
   background: #e3e3e3;
   width: 100%;
   display: block;
-  height: 600px; }
+  position: relative; }
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {
+  line-height: 1;
+  width: 100%; }
+
+.distinct-container {
+  color: #ffffff;
+  position: absolute;
+  bottom: -4%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+  .distinct-container .distinctions {
+    background: #002147;
+    padding: 10px; }
+    .distinct-container .distinctions .single-dist {
+      text-align: center;
+      padding: 10px 0;
+      border-right: 1px solid #e3e3e3; }
+      .distinct-container .distinctions .single-dist:last-of-type {
+        border-right: none; }
+      .distinct-container .distinctions .single-dist .dist-icon {
+        margin-bottom: 12px;
+        font-size: 36px; }
+      .distinct-container .distinctions .single-dist .dist-text {
+        font-size: 14px;
+        font-family: 'opensans-semibold'; }
 
 /*Entry section*/
 .entry-content {
-  padding: 40px 0; }
+  padding: 100px 0 40px 0; }
   .entry-content .welcome-sec .welcome-sec-content {
     max-width: 490px; }
   .entry-content .welcome-sec h1, .entry-content .welcome-sec p {
@@ -527,9 +555,10 @@ header {
     margin: 0 auto; }
   .degree-progs .degrees {
     display: flex;
-    flex: 0; }
+    flex: 0;
+    flex-wrap: wrap; }
     .degree-progs .degrees .single-degree {
-      width: 240px;
+      width: 196px;
       margin: 20px 0 20px 0;
       padding-right: 10px; }
       .degree-progs .degrees .single-degree .degree-bg {
@@ -614,6 +643,7 @@ img {
     .webinars-sec .diploma-section .diploma-posts-feat {
       max-width: 654px; }
       .webinars-sec .diploma-section .diploma-posts-feat button {
+        float: right;
         margin-top: 36px; }
   .webinars-sec .gqmc-section {
     width: 100%;
@@ -631,29 +661,67 @@ img {
         display: block;
         float: right;
         margin-top: 36px; }
+  .webinars-sec .diploma-posts-feat .feat-posts-single {
+    position: relative;
+    overflow: hidden; }
+    .webinars-sec .diploma-posts-feat .feat-posts-single .img-cont img {
+      width: 100%; }
+    .webinars-sec .diploma-posts-feat .feat-posts-single .feat-post-content {
+      color: #ffffff;
+      padding: 6px;
+      text-align: center;
+      font-family: 'opensans';
+      position: absolute;
+      background: rgba(0, 33, 71, 0.6);
+      z-index: 888;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: content-box;
+      top: 76%;
+      left: 0;
+      right: 0;
+      width: 122px;
+      height: 134px;
+      display: block; }
+      .webinars-sec .diploma-posts-feat .feat-posts-single .feat-post-content .feat-post-head {
+        font-family: 'opensans-semibold';
+        font-size: 16px;
+        margin: 6px 0;
+        color: #ffffff; }
+    .webinars-sec .diploma-posts-feat .feat-posts-single:hover .feat-post-content {
+      top: 0;
+      cursor: pointer;
+      transition-duration: .8s;
+      transition-timing-function: ease-in-back; }
 
 /*Perks section*/
 .perks-sec .library-perk, .perks-sec .fee-perk, .perks-sec .slider-perk {
   text-align: center;
-  height: 340px;
-  padding: 22px 36px; }
+  padding: 22px;
+  height: 272px; }
+.perks-sec .slider-perk {
+  padding: 0; }
+  .perks-sec .slider-perk ol li {
+    list-style-type: square; }
 .perks-sec .library-perk {
   background: #3fccf6; }
   .perks-sec .library-perk .lib-icon img {
-    width: 90px; }
+    width: 60px; }
   .perks-sec .library-perk p {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'opensans-light'; }
 .perks-sec .fee-perk {
   color: #ffffff;
   background: #d4a421; }
   .perks-sec .fee-perk button {
-    margin-top: 52px; }
+    margin-top: 8px; }
   .perks-sec .fee-perk h3 {
-    color: #ffffff; }
+    color: #ffffff;
+    margin: 12px 0; }
   .perks-sec .fee-perk p {
     font-size: 16px;
-    font-family: 'opensans-light'; }
+    font-family: 'opensans-light';
+    margin-bottom: 8px; }
   .perks-sec .fee-perk .guarantee-icon img {
     width: 90px; }
 
@@ -741,6 +809,13 @@ img {
 
 .members-cont .single-member img {
   border: 1px solid #e3e3e3; }
+
+.partners-section .nav-head-cont {
+  font-size: 32px; }
+  .partners-section .nav-head-cont .nav-left:hover {
+    cursor: pointer; }
+  .partners-section .nav-head-cont .nav-right:hover {
+    cursor: pointer; }
 
 /*Footer Styles*/
 footer {

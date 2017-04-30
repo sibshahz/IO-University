@@ -4,6 +4,6 @@ $(document).ready(function(){
 	    slides        : '.single-test',
 	    navContainer    : '.test-nav',
 	    slideWidth : '255',
-	    animationSpeed: 500
+	    animationSpeed: 1600
 	});
 });

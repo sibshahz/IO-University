@@ -433,11 +433,44 @@ header{
     background: $light_grey;
     width: 100%;
     display: block;
-    height: 600px;
+    position:relative;
+}
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {
+    line-height: 1;
+    width: 100%;
+}
+.distinct-container{
+    color: #ffffff;
+    position:absolute;
+    bottom:-4%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    .distinctions{
+        background:$navy_blue_bg;
+        padding:10px;
+        .single-dist{
+            text-align:center;
+            padding:10px 0;
+            border-right: 1px solid $light_grey;
+            &:last-of-type{
+                border-right: none;
+            }
+            .dist-icon{
+                margin-bottom:12px;
+                font-size:36px;
+            }
+            .dist-text{
+                font-size:14px;
+                font-family: 'opensans-semibold';
+            }
+        }
+    }
 }
 /*Entry section*/
 .entry-content{
-    padding:40px 0;
+    padding:100px 0 40px 0;
     .welcome-sec{
         .welcome-sec-content{
             max-width: 490px;
@@ -553,9 +586,10 @@ header{
     .degrees{
         display: flex;
         flex: 0;
+        flex-wrap: wrap;
         .single-degree{
             // background: #ffffff;
-            width: 240px;
+            width: 196px;
             margin: 20px 0 20px 0;
             padding-right:10px;
             .degree-bg{
@@ -667,6 +701,7 @@ img{
         .diploma-posts-feat{
             max-width: 654px;
             button{
+                float:right;
                 margin-top:36px;
             }
         }
@@ -698,23 +733,77 @@ img{
             }
         }
     }
+
+    //featured webinars
+    .diploma-posts-feat{
+        .feat-posts-single{
+            position:relative;
+            overflow: hidden;
+            .img-cont{
+                img{
+                    width: 100%;
+                }
+            }
+            .feat-post-content{
+                color: #ffffff;
+                padding:6px;
+                text-align: center;
+                font-family: 'opensans';
+                position:absolute;
+                background: rgba(0,33,71,.6);
+                z-index: 888;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing:content-box;
+                top: 76%;
+                left: 0;
+                right: 0;
+                width: 122px;
+                height: 134px;
+                display: block;
+                .feat-post-head{
+                    font-family: 'opensans-semibold';
+                    font-size: 16px;
+                    margin:6px 0;
+                    color: #ffffff;
+                }        
+            }
+            &:hover .feat-post-content{
+                top:0;
+                cursor:pointer;
+                transition-duration: .8s;
+                transition-timing-function: ease-in-back;
+            }
+        }
+    }
 }
 /*Perks section*/
 .perks-sec{
     .library-perk,.fee-perk,.slider-perk{
         text-align: center;
-        height: 340px;
-        padding:22px 36px;
+        padding:22px;
+        height: 272px;
+    }
+    .slider-perk{
+        padding:0;
+        ol{
+            li{
+                list-style-type: square;
+            }
+        }
     }
     .library-perk{
         background:$test_color;
         .lib-icon{
             img{
-            width: 90px;
+            width: 60px;
             }
         }
+        h3{
+            // margin:8px 0;
+        }
         p{
-            font-size: 16px;
+            font-size: 14px;
             font-family: 'opensans-light';
         }
     }
@@ -722,14 +811,16 @@ img{
         color: #ffffff;
         background:#d4a421;
         button{
-            margin-top: 52px;
+            margin-top: 8px;
         }
         h3{
             color: #ffffff;
+            margin:12px 0;
         }
         p{
             font-size: 16px;
             font-family: 'opensans-light';
+            margin-bottom:8px;
         }
         .guarantee-icon{
             img{width: 90px;}
@@ -848,6 +939,22 @@ img{
             border:1px solid $light_grey;    
         }
         
+    }
+}
+.partners-section{
+    .nav-head-cont{
+        font-size:32px;
+        .nav-left{
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+        .nav-right{
+            &:hover{
+                cursor:pointer;
+            }
+        }
     }
 }
 /*Footer Styles*/

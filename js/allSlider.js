@@ -1,15 +1,20 @@
 (function($) {
-	var navTemplate="<span class=\"nav-left\"><i class=\"fa fa-arrow-circle-o-left\" aria-hidden=\"true\"></i></span>|<span class=\"nav-right\"><i class=\"fa fa-arrow-circle-o-right\" aria-hidden=\"true\"></i></span>";
-	var container=null;
-	var slides=null;
-	var navContainer=null;
-	var nextNav=null;
-	var prevNav=null;
-	var slideNumbers=null;
-	var currentSlide=null;
-	var slideWidth=null;
-	var animationSpeed=null;
+
     $.fn.contentslider = function(options) {
+    var navTemplate="<span class=\"nav-left\"><i class=\"fa fa-arrow-circle-o-left\""; 
+    navTemplate+=" aria-hidden=\"true\"></i></span>|<span class=\"nav-right\">";
+    navTemplate+=" <i class=\"fa fa-arrow-circle-o-right\" aria-hidden=\"true\"></i></span>";
+    
+    var container=null;
+    var slides=null;
+    var navContainer=null;
+    var nextNav=null;
+    var prevNav=null;
+    var slideNumbers=null;
+    var currentSlide=null;
+    var slideWidth=null;
+    var animationSpeed=null;
+
     	var settings = $.extend({
             container         : null,
             slides        : null,
@@ -44,7 +49,7 @@
        		var leftMargin=(currentSlide*slideWidth)+(currentSlide*30);
        		container.animate({
        			'margin-left':-leftMargin
-       		},animationSpeed);
+       		},animationSpeed,'easeInOutBack');
        		currentSlide++;       		
        	}else{
        		return;
@@ -56,14 +61,14 @@
            	var leftMargin=0;
        		container.animate({
        			'margin-left': leftMargin
-       		},animationSpeed);
+       		},animationSpeed,'easeInOutBack');
        	}
        	if(currentSlide>2){
            	var previousMargin=parseInt(container.css("margin-left"));
            	var leftMargin=parseInt(previousMargin)+parseInt((parseInt(slideWidth)+30));
        		container.animate({
     			'margin-left': leftMargin
-			}, animationSpeed);
+			}, animationSpeed,'easeInOutBack');
        		currentSlide--;
        	}else{
        		return;
