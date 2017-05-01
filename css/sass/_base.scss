@@ -6,9 +6,14 @@ $max_width:1170px;
 // $base-line-height: 28px;
 // $rhythm-unit: 'rem';
 // $rem-with-px-fallback:true;
-
+$large_screen:'min-width: 1200px';
+$medium_screen:'min-width: 992px';
+$small_screen:'min-width: 768px';
+$verysmall_screen:'max-width: 767px';
+$small_mobile_screen:'max-width:480px';
 
 $navy_blue_bg:#002147;
+$white_blue:#e1efff;
 $blue_bg:#0b70e4;
 $orange_bg:#ff3d00;
 $dark_orange_bg:#b92c00;

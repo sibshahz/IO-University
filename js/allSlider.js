@@ -4,7 +4,7 @@
     var navTemplate="<span class=\"nav-left\"><i class=\"fa fa-arrow-circle-o-left\""; 
     navTemplate+=" aria-hidden=\"true\"></i></span>|<span class=\"nav-right\">";
     navTemplate+=" <i class=\"fa fa-arrow-circle-o-right\" aria-hidden=\"true\"></i></span>";
-    
+
     var container=null;
     var slides=null;
     var navContainer=null;
@@ -75,6 +75,92 @@
        	}
        }
 
+    }
+
+
+
+
+
+      $.fn.memberslider = function(options) {
+      var msettings = $.extend({
+            mslidecontainer         : null,
+            mnavContainer    : null,
+            msingleSlide     : null,
+            manimationSpeed  : null
+        }, options);
+      var mslidedLeft=null;
+      var mslidedRight=null;
+      var mtotalSlideWidth=null;
+      var mdisplayWidth=null;
+      var mslidecontainer=$(this).find(msettings.mslidecontainer);
+      console.log("Widht is: ",mslidecontainer.outerWidth());
+      var mnavContainer=$(this).find(''+msettings.mnavContainer+'');
+      var manimationSpeed=msettings.manimationSpeed;
+      var msingleSlide=mslidecontainer.find(msettings.msingleSlide);      
+      console.log("IS it "+msettings.mnavContainer);
+      console.log(mnavContainer);
+      var mnextNav=mnavContainer.find('span.nav-right');
+      var mprevNav=mnavContainer.find('span.nav-left');
+      var mdisplay=mslidecontainer.find('.slideWrapper');
+
+      mtotalSlideWidth=0;
+      mdisplayWidth=mslidecontainer.outerWidth();
+
+      msingleSlide.each(function(){
+        mtotalSlideWidth+=$(this).outerWidth(true);
+      });
+
+      $(mslidecontainer).css("overflow","hidden");
+      mdisplay.css("margin-left",0);
+      mdisplay.css("margin-right",0);
+      mdisplay.css("width",mtotalSlideWidth);
+      console.log("Total width is: ",mtotalSlideWidth);
+
+      mslidedLeft=0;
+
+      mnextNav.on("click",slideRight);
+      mprevNav.on("click",slideLeft);
+
+
+
+      function slideRight(){
+        console.log("right button clicked");
+        var mpreviousLeft=Math.abs(parseInt(mdisplay.css("margin-left")));
+        //         console.log("Previous margin left"+mpreviousRight);
+        
+        // var mdifference=mtotalSlideWidth-mdisplayWidth;
+        // mslidedRight+=mpreviousRight;
+        console.log(mslidedLeft);
+        mslidedLeft-=mdisplayWidth;
+        if(mpreviousLeft>0){
+            mdisplay.animate({
+            'margin-left':-(mpreviousLeft-mdisplayWidth)
+          },manimationSpeed);
+        }else{
+          return;
+        }
+      }
+
+      function slideLeft(){
+
+        var mpreviousLeft=Math.abs(parseInt(mdisplay.css("margin-left")));
+                console.log("Previous margin left"+mpreviousLeft);
+      
+        var mdifference=mtotalSlideWidth-mdisplayWidth;
+        console.log(mslidedLeft);
+        if(mslidedLeft<(mtotalSlideWidth-mdisplayWidth)){
+          mslidedLeft+=mpreviousLeft;
+        }
+
+        if(mslidedLeft<(mtotalSlideWidth-mdisplayWidth)){
+            
+            mdisplay.animate({
+            'margin-left':-(mpreviousLeft+mdisplayWidth)
+          },manimationSpeed);
+        }else{
+          return;
+        }
+      }
     }
 
 }(jQuery));

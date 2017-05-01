@@ -1,0 +1,491 @@
+@import "_base.scss";
+
+
+
+
+@media ($small_mobile_screen){
+	.webinars-sec{
+		background:none;
+		.diploma-section{
+			background:#f8f8f8;
+		}
+		.gqmc-section{
+			background: #fdf5da;
+		}
+	}
+	//typographysettings
+	/*Font styling*/
+	h1,h2,h3,h4,h5,h6{
+	    font-family: 'merriweather','serif';
+	    font-weight: bold;
+	    color: $dark_grey;
+	}
+	h1{
+	    font-size: 28px;
+	}
+	h2{
+	    font-size: 24px;
+	}
+	h3{
+	    font-size:20px;
+	}
+	h4{
+	    font-size:18px;
+	}
+	h5{
+	    font-size: 14px;
+	}
+	h6{
+	    font-size: 14px;
+	}
+	b{
+	    font-size: 12px;
+	    font-family:'merriweather-bold';
+	    font-weight: lighter;
+	}
+	.description{
+	    color: $text_color;
+	    font-family: 'opensans','sans-serif';
+	    font-weight: normal;
+	    font-size: 14px;
+	    line-height: 26px;
+	}
+	/*Button styles*/
+	button,.regular_button{
+	    width: 150px;
+	    height: 48px;
+	    border-radius:3px;
+	    border:none;
+	    background-color: $blue_bg;
+	    box-shadow:0 2px 2px $navy_blue_bg;
+	    color: #ffffff;
+	    font-family: 'opensans-bold','sans-serif';
+	    font-size: 14px;
+	    font-weight: bold;
+	    &:hover{
+	        transition-duration: .3s;
+	        background:#ffffff;
+	        border:1px solid $blue_bg;
+	        box-shadow:none;
+	        color: $navy_blue_bg;
+	    }
+	}
+	.button_style_two{
+	    width: 166px;
+	    height: 34px;
+	    padding-left:4px;
+	    padding-right:4px;
+	    box-shadow:none;
+	    border-radius:0;
+	    border:none;
+	    background-color:$navy_blue_bg;
+	    color: #ffffff;
+	    font-family: 'merriweather','serif';
+	    font-weight: normal;
+	    font-size: 14px;
+	    &:hover{
+	        background-color:$blue_bg;
+	        color: #ffffff; 
+	    }
+	}
+	.background_button,.subscription_button{
+	    width: 180px;
+	    height: 50px;
+	    background-color: #ffffff;
+	    color: $blue_bg;
+	    border-radius:0;
+	    box-shadow:none;
+	    font-family: 'opensans','sans-serif';
+	    font-weight: normal;
+	    border:1px solid #ffffff;
+	    &:hover{
+	        background:$navy_blue_bg;
+	        color: #ffffff;
+	        border:1px solid #ffffff;
+	    }
+	}
+	.subscription_button{
+	    color: #ffffff;
+	    background:$dark_orange_bg;
+	    border:1px solid $dark_orange_bg;
+	    &:hover{
+	        border:1px solid #ffffff;
+	        background:$dark_orange_bg;
+	        font-family: 'opensans-bold';
+	    }
+	}
+	.widget_button{
+	    width:195px;
+	    margin:6px;
+	    height:40px;
+	    border-radius:3px;
+	    box-shadow:none;
+	    font-family: 'opensans';
+	    font-weight: normal;
+	    background:rgba(0,0,0,0);
+	    border:1px solid #ffffff;
+	    color: #ffffff;
+	    font-size: 16px;
+	    &:hover{
+	        width:195px;
+	        height:40px;
+	        border-radius:3px;
+	        box-shadow:none;
+	        background:rgba(0,0,0,0);
+	        border:1px solid #ffffff;
+	        color: #ffffff;
+	        font-size: 16px;
+	    }
+	}
+	.action_button{
+	    width: 150px;
+	    height: 48px;
+	    border-radius:3px;
+	    background: $orange_bg;
+	    color: #ffffff;
+	    font-family: 'opensans-bold';
+	    font-size:14px;
+	    box-shadow:0 2px 2px $dark_orange_bg;
+	    &:hover{
+	        background:#ffffff;
+	        font-family: 'opensans-bold';
+	        border:1px solid $orange_bg;
+	        color: $dark_orange_bg;
+	    }
+	}
+	.donate_button,.login_button,.register_button{
+	    width: 166px;
+	    height: 42px;
+	    border-radius:0;
+	    background:$orange_bg;
+	    box-shadow:none;
+	    border:none;
+	    font-size: 18px;
+	    font-family: 'merriweather';
+	    font-weight: normal;
+	    color: #ffffff;
+	    &:hover{
+	        background:$dark_orange_bg;
+	        color: #ffffff;
+	        border:none;
+	    }
+	}
+	.login_button,.register_button{
+	    width: 116px;
+	    height:42px;
+	}
+	//end font-styling
+	.row{
+		margin-left:0;
+		margin-right:0;
+	}
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+		padding-left:0;
+		padding-right:0;
+	}
+	.form-control{
+		display:block;
+		margin-bottom:12px;
+		width:100%!important;
+		border-top-right-radius:4px!important;
+		border-bottom-right-radius:4px!important;
+	}
+	.form-container .btn-primary{
+		margin-bottom:4px;
+		border-top-left-radius:4px;
+		border-bottom-left-radius:4px;
+	}
+	//navigation
+	header{
+		.main-bar{
+			.simple-main-menu{
+				.navbar-default{
+					.navbar-nav{
+						&>li{
+							.dropdown-menu{
+							width: 100%;
+							left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	//top bar settings
+	header{
+ 		.top-bar{ 
+ 			.social-cont{
+ 				margin:6px 0;
+ 			}
+ 			.search-form{
+ 				width: auto;
+ 				display: inline-block;
+				clear: both;
+				float: none;
+ 				.input-group{
+ 					background:$navy_blue_bg;
+ 				}
+ 			}
+ 			.reg-log-buttons{
+ 				width: auto;
+				display: block;
+				float: none;
+				position: relative;
+				clear: both;
+				margin: 6px auto;
+				text-align: center;
+ 			}
+ 		}
+	}
+	//navigation settings
+	.navbar-default{
+		font-size: 14px!important;
+		.navbar-nav{
+			&>li{
+				float: left;
+				&>a{
+					padding:10px;
+				}
+			}
+		}
+	}
+	//slider settings
+	.slider-main{
+		.distinct-container{
+			display: none;
+		}
+	}
+	//news-section settings
+	.news-section{
+		.news-list{
+			ul.list-news-content{
+				padding-left:6px;
+				.news-content{
+					width: 100%!important;
+				}
+			}
+		}
+	}
+	/*How to section*/
+	.how-to-container{
+
+	    .jumbotron-sec{
+	        h1{
+	            font-size: 25px;
+	            .student-number{
+	                font-size: 50px;
+	            }
+	        }
+	        .widget_button{
+	            margin:30px auto;
+	        }
+	    }
+	}
+	/*Call to action section*/
+	.call-to-action{
+
+	    .action_heading{
+	        font-size: 22px;
+	        .free-text{
+	            font-size:38px;
+	        }
+	    }
+	    .subscribe-section{
+	    	input{
+	    		width: auto;
+	    	}
+	    	input,button{
+	    		margin-bottom: 6px;
+	    	}
+	    }
+	}
+	//footer
+	footer{
+		.footer-widget{
+			&#testimonials{
+				max-width: 255px;
+				width: 255px;
+			}
+		}
+	}
+	.short-courses{
+		.short-course{
+			display: block;
+			margin: 12px auto;
+		}
+	}
+
+}
+/*Extra Small Devices*/
+@media screen and ($verysmall_screen) {
+	.webinars-sec{
+		background:none;
+		.diploma-section{
+			background:#f8f8f8;
+		}
+		.gqmc-section{
+			background: #fdf5da;
+		}
+	}
+	.form-control{
+		display:inline;
+	}
+	.form-container .btn-primary{
+		margin-bottom:4px;
+	}
+		/*Call to action section*/
+	.call-to-action{
+
+	    .action_heading{
+	        font-size: 32px;
+	        .free-text{
+	            font-size:48px;
+	            display: block;
+	            clear: both;
+	            float: none;
+	        }
+	    }
+	    .subscribe-section{
+	    	input{
+	    		width: auto;
+	    	}
+	    }
+	}
+	footer{
+		.footer-widget{
+			&#testimonials{
+				max-width: 255px;
+				width: 255px;
+			}
+		}
+	}
+	.navbar-default{
+		font-size: 14px!important;
+		.navbar-nav{
+			&>li{
+				float: left;
+				&>a{
+					padding:10px;
+				}
+			}
+		}
+	}
+	.slider-main{
+		.distinct-container{
+			display: none;
+		}
+	}
+	header{
+		.main-bar{
+			.simple-main-menu{
+				.navbar-default{
+					.navbar-nav{
+						&>li{
+							.dropdown-menu{
+							width: 100%;
+							left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.short-courses{
+		.short-course{
+			display: block;
+			margin: 12px auto;
+		}
+	}
+}
+/*Small devices and tablets*/
+@media screen and ($small_screen) {
+	.webinars-sec{
+		background:none;
+		.diploma-section{
+			background:#f8f8f8;
+		}
+		.gqmc-section{
+			background: #fdf5da;
+		}
+	}
+	header{
+		.main-bar{
+			.simple-main-menu{
+				.navbar-default{
+					.navbar-nav{
+						&>li{
+							.dropdown-menu{
+							width: 150%;
+							left: -50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*Medium devices and tablets*/
+@media screen and ($medium_screen) {
+	.webinars-sec{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f8f8+0,f8f8f8+61,fdf5da+62,fdf5da+100 */
+		background: #f8f8f8; /* Old browsers */
+		background: -moz-linear-gradient(left, #f8f8f8 0%, #f8f8f8 61%, #fdf5da 61%, #fdf5da 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, #f8f8f8 0%,#f8f8f8 61%,#fdf5da 61%,#fdf5da 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, #f8f8f8 0%,#f8f8f8 61%,#fdf5da 61%,#fdf5da 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#fdf5da',GradientType=1 ); /* IE6-9 */
+		.diploma-section{
+			background:transparent;
+		}
+		.gqmc-section{
+			background: transparent;
+		}
+	}
+	header{
+
+		.main-bar{
+			.simple-main-menu{
+				.navbar-default{
+					.navbar-nav{
+						&>li{
+							.dropdown-menu{
+							width: 150%;
+							left: -50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.webinars-sec{
+		.diploma-section {
+			.diploma-posts-feat{
+				button{
+					margin-right: 138px;
+				}
+			}
+		}
+	}  
+}
+/*Large Devices devices and tablets*/
+@media screen and ($large_screen) {
+	header{
+		.main-bar{
+			.simple-main-menu{
+				.navbar-default{
+					.navbar-nav{
+						&>li{
+							.dropdown-menu{
+							width: 150%;
+							left: -50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
