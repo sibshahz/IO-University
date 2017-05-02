@@ -13,4 +13,8 @@ $(document).ready(function(){
         msingleSlide		: 	'.member-col',
         manimationSpeed  : 1600
 	});
+
+	$('.nav-handler').on("click",function(){
+		$('.simple-main-menu').toggleClass("hidden-xs");
+	});
 });

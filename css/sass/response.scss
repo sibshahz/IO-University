@@ -4,6 +4,19 @@
 
 
 @media ($small_mobile_screen){
+	.entry-content{
+		.welcome-sec{
+			max-width: 100%;
+			text-align:center;
+			margin-bottom: 20px;
+			p{
+				max-width: 100%;
+			}
+			.welcome-sec-content{
+				max-width: 100%;
+			}
+		}
+	}
 	.webinars-sec{
 		background:none;
 		.diploma-section{
@@ -319,6 +332,19 @@
 }
 /*Extra Small Devices*/
 @media screen and ($verysmall_screen) {
+	.entry-content{
+		.welcome-sec{
+			max-width: 100%;
+			text-align:center;
+			margin-bottom: 20px;
+			p{
+				max-width: 100%;
+			}
+			.welcome-sec-content{
+				max-width: 100%;
+			}
+		}
+	}
 	.webinars-sec{
 		background:none;
 		.diploma-section{
@@ -364,7 +390,7 @@
 		font-size: 14px!important;
 		.navbar-nav{
 			&>li{
-				float: left;
+				float: none;
 				&>a{
 					padding:10px;
 				}
@@ -377,6 +403,9 @@
 		}
 	}
 	header{
+		.logo-container{
+			margin-bottom: 10px;
+		}
 		.main-bar{
 			.simple-main-menu{
 				.navbar-default{
@@ -412,6 +441,10 @@
 	}
 	header{
 		.main-bar{
+			.nav-handler{
+				background: none;
+				display: none;
+			}
 			.simple-main-menu{
 				.navbar-default{
 					.navbar-nav{
