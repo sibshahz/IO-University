@@ -88,10 +88,17 @@ b{
     font-size: 18px;
     line-height: 32px;
 }
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
 /*Button styles*/
-button,.regular_button{
+button,.regular_button,.simple-button{
     width: 150px;
     height: 48px;
+    line-height: 48px;
+    text-align: center;
     border-radius:3px;
     border:none;
     background-color: $blue_bg;
@@ -101,6 +108,7 @@ button,.regular_button{
     font-size: 14px;
     font-weight: bold;
     &:hover{
+        text-decoration: none;
         transition-duration: .2s;
         background:#ffffff;
         border:1px solid $blue_bg;
@@ -111,6 +119,8 @@ button,.regular_button{
 .button_style_two{
     width: 166px;
     height: 34px;
+    line-height: 34px;
+    text-align: center;
     padding-left:4px;
     padding-right:4px;
     box-shadow:none;
@@ -122,6 +132,7 @@ button,.regular_button{
     font-weight: normal;
     font-size: 14px;
     &:hover{
+        text-decoration: none;
         background-color:$blue_bg;
         color: #ffffff; 
     }
@@ -129,6 +140,8 @@ button,.regular_button{
 .background_button,.subscription_button{
     width: 180px;
     height: 50px;
+    line-height: 50px;
+    text-align: center;
     background-color: #ffffff;
     color: $blue_bg;
     border-radius:0;
@@ -138,6 +151,7 @@ button,.regular_button{
     border:1px solid #ffffff;
     &:hover{
         background:$navy_blue_bg;
+        text-decoration: none;
         color: #ffffff;
         border:1px solid #ffffff;
     }
@@ -148,6 +162,7 @@ button,.regular_button{
     border:1px solid $dark_orange_bg;
     &:hover{
         border:1px solid #ffffff;
+        text-decoration: none;
         background:$dark_orange_bg;
         font-family: 'opensans-bold';
     }
@@ -156,6 +171,8 @@ button,.regular_button{
     width:195px;
     margin:6px;
     height:40px;
+        line-height: 40px;
+    text-align: center;
     border-radius:3px;
     box-shadow:none;
     font-family: 'opensans';
@@ -166,6 +183,7 @@ button,.regular_button{
     font-size: 16px;
     &:hover{
         font-weight: normal;
+        text-decoration: none;
         transition-duration:.2s;
         width:195px;
         height:40px;
@@ -180,6 +198,8 @@ button,.regular_button{
 .action_button{
     width: 150px;
     height: 48px;
+    line-height: 48px;
+    text-align: center;
     border-radius:3px;
     background: $orange_bg;
     color: #ffffff;
@@ -187,6 +207,7 @@ button,.regular_button{
     font-size:14px;
     box-shadow:0 2px 2px $dark_orange_bg;
     &:hover{
+        text-decoration: none;
         background:#ffffff;
         font-family: 'opensans-bold';
         border:1px solid $orange_bg;
@@ -196,6 +217,8 @@ button,.regular_button{
 .donate_button,.login_button,.register_button{
     width: 166px;
     height: 42px;
+        line-height: 42px;
+    text-align: center;
     border-radius:0;
     background:$orange_bg;
     box-shadow:none;
@@ -205,6 +228,7 @@ button,.regular_button{
     font-weight: normal;
     color: #ffffff;
     &:hover{
+        text-decoration: none;
         background:$dark_orange_bg;
         color: #ffffff;
         border:none;
@@ -213,6 +237,10 @@ button,.regular_button{
 .login_button,.register_button{
     width: 116px;
     height:42px;
+    display: inline-block;
+    float: left;
+    line-height: 42px;
+    text-align: center;
 }
 /*Input type styles*/
 input{
@@ -244,6 +272,7 @@ input{
                 display: block;
             }
             &:hover{
+                text-decoration: none;
                 background:$blue_bg;
                 color: #ffffff;
             }
@@ -321,6 +350,7 @@ header{
                 width: 50px;
                 border:none;
                 &:hover{
+                    text-decoration: none;
                     background:rgba(0,0,0,0);
                     padding:0;
                     margin:0;
@@ -341,8 +371,10 @@ header{
                 border-radius: 0;
             }
         }
-        button.login_button{
+        div.login_button{
             border-right:2px solid #ffffff;
+            display: inline-block;
+            float: left;
         }
         .reg-log-buttons{
             width: auto;
@@ -364,6 +396,7 @@ header{
                     line-height: 42px;
                     border-left:1px solid $light_grey;
                     &:hover{
+                        text-decoration: none;
                         border-left:1px solid $blue_bg;
                     }
                     a {
@@ -372,6 +405,7 @@ header{
                         line-height: 42px;
                         display: block;
                         &:hover{
+                            text-decoration: none;
                             color: #ffffff;
                         }
                     }
@@ -423,6 +457,13 @@ header{
         .simple-main-menu{
             width: auto;
             float: right;
+            .dropdown{
+                a{
+                    &:active,&:focus{
+                        color: $orange_bg!important;
+                    }
+                }
+            }
             .navbar{
                 margin-bottom: 0;
                 margin-top: 20px;
@@ -448,7 +489,7 @@ header{
                         &>a{
                             color: $navy_blue_bg;
                             &:hover{
-
+                                text-decoration: none;
                             }
                         }
                         .dropdown-menu{
@@ -604,7 +645,7 @@ header{
         h1{
             text-align: center;
         }
-        button{
+        div.simple-button{
             display: block;
             margin:30px auto 0 auto;
         }
@@ -717,6 +758,14 @@ header{
             box-sizing: content-box;
             margin: 20px 0 20px 0;
             padding-right: 16px;
+            .degree-types{
+                div.button_style_two{
+                    clear: both;
+                    margin:6px auto;
+                    display: block;
+                    float: none;
+                }
+            }
             .degree-bg{
                 height: 100%;
                 background:#ffffff;
@@ -732,7 +781,7 @@ header{
             &:last-of-type{
                 margin-right: none;
             } 
-           button{
+           div.simple-button{
                 display: block;
                 clear: both;
                 margin:10px auto;
@@ -886,7 +935,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         }
         .diploma-posts-feat{
             max-width: auto;
-            button{
+            div.simple-button{
                 float:right;
                 margin-top:36px;
             }
@@ -920,11 +969,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
                         }
                     }
                 }
-            }
-            button{
-                display: block;
-                float: right;
-                margin-top:36px;
+                div.action_button{
+                    display: block;
+                    float: right;
+                    margin-top:50px;
+                }
             }
         }
     }
@@ -1005,8 +1054,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     }
     .library-perk{
         background:$test_color;
-        button.widget_button{
+        div.widget_button{
             &:hover{
+                text-decoration: none;
                 font-weight: normal;
                 background: #ffffff;
                 color: $test_color;
@@ -1029,9 +1079,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     .fee-perk{
         color: #ffffff;
         background:#d4a421;
-        button.widget_button{
+        div.widget_button{
             margin-top: 8px;
             &:hover{
+                text-decoration: none;
                 font-weight: normal;
                 background: #ffffff;
                 color: #d4a421;
@@ -1074,7 +1125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         background-position: center top, center;
         background-repeat: no-repeat;
         text-align: center;
-        padding:0 70px;
+        padding:2px 70px;
         h1{
             color: #ffffff;
             font-family: 'opensans-light','sans-serif';
@@ -1089,6 +1140,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         .widget_button{
             margin:60px auto;
             &:hover{
+                text-decoration: none;
                 background:#ffffff;
                 font-weight: normal;
                 color: $navy_blue_bg;
@@ -1123,6 +1175,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         padding-bottom:30px;
         border-bottom:1px solid $white_blue;
         text-align: center;
+        div.widget_button{
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     .action_heading{
         font-family: 'merriweather-light';
@@ -1148,6 +1204,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     }
     button.widget_button{
         &:hover{
+            text-decoration: none;
             background:#ffffff;
             color: $orange_bg;
             font-weight: normal;
@@ -1194,6 +1251,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         font-size:32px;
         .nav-left{
             &:hover{
+
                 cursor: pointer;
             }
 
@@ -1277,4 +1335,11 @@ footer{
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover{
     color: #ffffff;
     background: $navy_blue_bg;
+}
+.centered{
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    clear: both;
+    display: block;
 }

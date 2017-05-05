@@ -64,7 +64,7 @@
 	    line-height: 26px;
 	}
 	/*Button styles*/
-	button,.regular_button{
+	button,.regular_button,.simple-button{
 	    width: 150px;
 	    height: 48px;
 	    border-radius:3px;
@@ -450,8 +450,8 @@
 					.navbar-nav{
 						&>li{
 							.dropdown-menu{
-							width: 150%;
-							left: -50%;
+							width: 100%;
+							left: 0;
 							}
 						}
 					}
@@ -496,7 +496,7 @@
 	.webinars-sec{
 		.diploma-section {
 			.diploma-posts-feat{
-				button{
+				div.simple-button{
 					margin-right: 138px;
 				}
 			}

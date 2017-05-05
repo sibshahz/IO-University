@@ -137,10 +137,15 @@ b {
   font-size: 18px;
   line-height: 32px; }
 
+a:hover {
+  text-decoration: none; }
+
 /*Button styles*/
-button, .regular_button {
+button, .regular_button, .simple-button {
   width: 150px;
   height: 48px;
+  line-height: 48px;
+  text-align: center;
   border-radius: 3px;
   border: none;
   background-color: #0b70e4;
@@ -149,7 +154,8 @@ button, .regular_button {
   font-family: 'opensans-bold','sans-serif';
   font-size: 14px;
   font-weight: bold; }
-  button:hover, .regular_button:hover {
+  button:hover, .regular_button:hover, .simple-button:hover {
+    text-decoration: none;
     transition-duration: .2s;
     background: #ffffff;
     border: 1px solid #0b70e4;
@@ -159,6 +165,8 @@ button, .regular_button {
 .button_style_two {
   width: 166px;
   height: 34px;
+  line-height: 34px;
+  text-align: center;
   padding-left: 4px;
   padding-right: 4px;
   box-shadow: none;
@@ -170,12 +178,15 @@ button, .regular_button {
   font-weight: normal;
   font-size: 14px; }
   .button_style_two:hover {
+    text-decoration: none;
     background-color: #0b70e4;
     color: #ffffff; }
 
 .background_button, .subscription_button {
   width: 180px;
   height: 50px;
+  line-height: 50px;
+  text-align: center;
   background-color: #ffffff;
   color: #0b70e4;
   border-radius: 0;
@@ -185,6 +196,7 @@ button, .regular_button {
   border: 1px solid #ffffff; }
   .background_button:hover, .subscription_button:hover {
     background: #002147;
+    text-decoration: none;
     color: #ffffff;
     border: 1px solid #ffffff; }
 
@@ -194,6 +206,7 @@ button, .regular_button {
   border: 1px solid #b92c00; }
   .subscription_button:hover {
     border: 1px solid #ffffff;
+    text-decoration: none;
     background: #b92c00;
     font-family: 'opensans-bold'; }
 
@@ -201,6 +214,8 @@ button, .regular_button {
   width: 195px;
   margin: 6px;
   height: 40px;
+  line-height: 40px;
+  text-align: center;
   border-radius: 3px;
   box-shadow: none;
   font-family: 'opensans';
@@ -211,6 +226,7 @@ button, .regular_button {
   font-size: 16px; }
   .widget_button:hover {
     font-weight: normal;
+    text-decoration: none;
     transition-duration: .2s;
     width: 195px;
     height: 40px;
@@ -224,6 +240,8 @@ button, .regular_button {
 .action_button {
   width: 150px;
   height: 48px;
+  line-height: 48px;
+  text-align: center;
   border-radius: 3px;
   background: #ff3d00;
   color: #ffffff;
@@ -231,6 +249,7 @@ button, .regular_button {
   font-size: 14px;
   box-shadow: 0 2px 2px #b92c00; }
   .action_button:hover {
+    text-decoration: none;
     background: #ffffff;
     font-family: 'opensans-bold';
     border: 1px solid #ff3d00;
@@ -239,6 +258,8 @@ button, .regular_button {
 .donate_button, .login_button, .register_button {
   width: 166px;
   height: 42px;
+  line-height: 42px;
+  text-align: center;
   border-radius: 0;
   background: #ff3d00;
   box-shadow: none;
@@ -248,13 +269,18 @@ button, .regular_button {
   font-weight: normal;
   color: #ffffff; }
   .donate_button:hover, .login_button:hover, .register_button:hover {
+    text-decoration: none;
     background: #b92c00;
     color: #ffffff;
     border: none; }
 
 .login_button, .register_button {
   width: 116px;
-  height: 42px; }
+  height: 42px;
+  display: inline-block;
+  float: left;
+  line-height: 42px;
+  text-align: center; }
 
 /*Input type styles*/
 input {
@@ -285,6 +311,7 @@ input {
         line-height: 40px;
         display: block; }
       .social-cont ul .social-icon:hover {
+        text-decoration: none;
         background: #0b70e4;
         color: #ffffff; }
       .social-cont ul .social-icon:last-of-type {
@@ -349,6 +376,7 @@ header {
         width: 50px;
         border: none; }
         header .top-bar .search-form button.search-button:hover {
+          text-decoration: none;
           background: transparent;
           padding: 0;
           margin: 0;
@@ -365,8 +393,10 @@ header {
         background-color: inherit;
         border: none;
         border-radius: 0; }
-    header .top-bar button.login_button {
-      border-right: 2px solid #ffffff; }
+    header .top-bar div.login_button {
+      border-right: 2px solid #ffffff;
+      display: inline-block;
+      float: left; }
     header .top-bar .reg-log-buttons {
       width: auto;
       display: inline;
@@ -386,6 +416,7 @@ header {
           line-height: 42px;
           border-left: 1px solid #e3e3e3; }
           header .top-bar .social-cont ul li.social-icon:hover {
+            text-decoration: none;
             border-left: 1px solid #0b70e4; }
           header .top-bar .social-cont ul li.social-icon a {
             width: 42px;
@@ -393,6 +424,7 @@ header {
             line-height: 42px;
             display: block; }
             header .top-bar .social-cont ul li.social-icon a:hover {
+              text-decoration: none;
               color: #ffffff; }
   header .main-bar {
     padding: 10px 0 10px 0; }
@@ -429,6 +461,8 @@ header {
     header .main-bar .simple-main-menu {
       width: auto;
       float: right; }
+      header .main-bar .simple-main-menu .dropdown a:active, header .main-bar .simple-main-menu .dropdown a:focus {
+        color: #ff3d00 !important; }
       header .main-bar .simple-main-menu .navbar {
         margin-bottom: 0;
         margin-top: 20px; }
@@ -447,6 +481,8 @@ header {
           border-left: 1px solid #e3e3e3; }
           header .main-bar .simple-main-menu .navbar-default .navbar-nav > li > a {
             color: #002147; }
+            header .main-bar .simple-main-menu .navbar-default .navbar-nav > li > a:hover {
+              text-decoration: none; }
           header .main-bar .simple-main-menu .navbar-default .navbar-nav > li .dropdown-menu {
             border: none;
             background: #002147;
@@ -517,7 +553,7 @@ header {
     font-family: 'opensans-light'; }
   .entry-content .news-section h1 {
     text-align: center; }
-  .entry-content .news-section button {
+  .entry-content .news-section div.simple-button {
     display: block;
     margin: 30px auto 0 auto; }
   .entry-content .news-section .news-list {
@@ -608,6 +644,11 @@ header {
       box-sizing: content-box;
       margin: 20px 0 20px 0;
       padding-right: 16px; }
+      .degree-progs .degrees .single-degree .degree-types div.button_style_two {
+        clear: both;
+        margin: 6px auto;
+        display: block;
+        float: none; }
       .degree-progs .degrees .single-degree .degree-bg {
         height: 100%;
         background: #ffffff; }
@@ -619,7 +660,7 @@ header {
         margin-right: 10px; }
       .degree-progs .degrees .single-degree:last-of-type {
         margin-right: none; }
-      .degree-progs .degrees .single-degree button {
+      .degree-progs .degrees .single-degree div.simple-button {
         display: block;
         clear: both;
         margin: 10px auto; }
@@ -726,7 +767,7 @@ img {
           margin-top: 36px; }
     .webinars-sec .diploma-section .diploma-posts-feat {
       max-width: auto; }
-      .webinars-sec .diploma-section .diploma-posts-feat button {
+      .webinars-sec .diploma-section .diploma-posts-feat div.simple-button {
         float: right;
         margin-top: 36px; }
   .webinars-sec .gqmc-section {
@@ -746,10 +787,10 @@ img {
           .webinars-sec .gqmc-section .gqmc-content .post-content ul li a:hover {
             color: #ff3d00;
             text-decoration: none; }
-      .webinars-sec .gqmc-section .gqmc-content button {
+      .webinars-sec .gqmc-section .gqmc-content .post-content div.action_button {
         display: block;
         float: right;
-        margin-top: 36px; }
+        margin-top: 50px; }
   .webinars-sec .diploma-posts-feat .feat-posts-single {
     position: relative;
     overflow: hidden;
@@ -806,7 +847,8 @@ img {
     list-style-type: square; }
 .perks-sec .library-perk {
   background: #3fccf6; }
-  .perks-sec .library-perk button.widget_button:hover {
+  .perks-sec .library-perk div.widget_button:hover {
+    text-decoration: none;
     font-weight: normal;
     background: #ffffff;
     color: #3fccf6; }
@@ -819,9 +861,10 @@ img {
 .perks-sec .fee-perk {
   color: #ffffff;
   background: #d4a421; }
-  .perks-sec .fee-perk button.widget_button {
+  .perks-sec .fee-perk div.widget_button {
     margin-top: 8px; }
-    .perks-sec .fee-perk button.widget_button:hover {
+    .perks-sec .fee-perk div.widget_button:hover {
+      text-decoration: none;
       font-weight: normal;
       background: #ffffff;
       color: #d4a421; }
@@ -851,7 +894,7 @@ img {
     background-position: center top, center;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 0 70px; }
+    padding: 2px 70px; }
     .how-to-container .jumbotron-sec h1 {
       color: #ffffff;
       font-family: 'opensans-light','sans-serif';
@@ -864,6 +907,7 @@ img {
     .how-to-container .jumbotron-sec .widget_button {
       margin: 60px auto; }
       .how-to-container .jumbotron-sec .widget_button:hover {
+        text-decoration: none;
         background: #ffffff;
         font-weight: normal;
         color: #002147; }
@@ -890,6 +934,9 @@ img {
     padding-bottom: 30px;
     border-bottom: 1px solid #e1efff;
     text-align: center; }
+    .call-to-action .action-section div.widget_button {
+      margin-left: auto;
+      margin-right: auto; }
   .call-to-action .action_heading {
     font-family: 'merriweather-light';
     font-weight: lighter;
@@ -909,6 +956,7 @@ img {
       clear: both;
       float: none; }
   .call-to-action button.widget_button:hover {
+    text-decoration: none;
     background: #ffffff;
     color: #ff3d00;
     font-weight: normal; }
@@ -999,5 +1047,12 @@ footer {
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
   color: #ffffff;
   background: #002147; }
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  clear: both;
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */
