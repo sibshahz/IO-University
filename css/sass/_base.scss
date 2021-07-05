@@ -6,11 +6,11 @@ $max_width:1170px;
 // $base-line-height: 28px;
 // $rhythm-unit: 'rem';
 // $rem-with-px-fallback:true;
-$large_screen:'min-width: 1200px';
-$medium_screen:'min-width: 992px';
-$small_screen:'min-width: 768px';
-$verysmall_screen:'max-width: 767px';
-$small_mobile_screen:'max-width:480px';
+$xlarge_screen:'min-width: 1200px';
+$large_screen:'min-width: 992px';
+$medium_screen:'min-width: 768px';
+$small_screen:'min-width: 576px';
+$very_small_screen:'max-width:576px';
 
 $navy_blue_bg:#002147;
 $white_blue:#e1efff;

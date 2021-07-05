@@ -106,6 +106,7 @@ button,.regular_button,.simple-button{
     color: #ffffff;
     font-family: 'opensans-bold','sans-serif';
     font-size: 14px;
+    display: block;
     font-weight: bold;
     &:hover{
         text-decoration: none;
@@ -171,7 +172,8 @@ button,.regular_button,.simple-button{
     width:195px;
     margin:6px;
     height:40px;
-        line-height: 40px;
+    line-height: 40px;
+    display: block;
     text-align: center;
     border-radius:3px;
     box-shadow:none;
@@ -182,6 +184,8 @@ button,.regular_button,.simple-button{
     color: #ffffff;
     font-size: 16px;
     &:hover{
+        height: 40px;
+        line-height: 40px;
         font-weight: normal;
         text-decoration: none;
         transition-duration:.2s;
@@ -268,6 +272,7 @@ input{
             a{
                 width: 40px;
                 height: 40px;
+                color: $white_blue;
                 line-height: 40px;
                 display: block;
             }
@@ -306,7 +311,7 @@ input{
 header{
     display: block;
     // overflow: hidden;
-    padding-bottom:10px;
+    // padding-bottom:10px;
     .top-bar{
         height: auto;
         background:$navy_blue_bg;
@@ -337,6 +342,7 @@ header{
                 font-size: 12px;
                 font-weight: normal;
                 color:#ffffff;
+                padding:2px 8px;
                 &:focus,&:active{
                     box-shadow:none;
                 }
@@ -371,7 +377,7 @@ header{
                 border-radius: 0;
             }
         }
-        div.login_button{
+        a.login_button{
             border-right:2px solid #ffffff;
             display: inline-block;
             float: left;
@@ -440,6 +446,7 @@ header{
             .tag-line{
                 line-height: 100%;
                 float: left;
+                padding-top:20px;
                 h2{
                     font-size: 20px;
                     font-family: 'merriweather-bold';
@@ -464,10 +471,69 @@ header{
                     }
                 }
             }
-            .navbar{
-                margin-bottom: 0;
-                margin-top: 20px;
-            }
+
+               .navbar-default{
+                    margin-bottom: 0;
+                    padding:0;
+                    margin-top: 20px;
+                    background:none;
+                    font-family: 'opensans';
+                    font-size: 16px;
+                    border:none;
+                    .navbar-nav,.navbar-nav.nav{
+                        display: block;
+                        li.dropdown.show{
+                            background: $navy_blue_bg;
+                            color: #ffffff;
+                            .dropdown-menu{
+                                // position: absolute;
+                            }
+                        }
+                        &>li{
+                            border-left:1px solid $light_grey;
+                            float: left;
+                            padding:15px 10px;
+                            &>a{
+                                color: $navy_blue_bg;
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                            .dropdown-menu{
+                                border:none;
+                                margin-top: 0;
+                                background:$navy_blue_bg;
+                                // width: 150%;
+                                // left: -50%;
+                                //  padding:12px 12px 44px 12px;
+                                color: $white_blue;
+                                .nav-col{
+                                    .nav-header{
+                                        font-family:'merriweather';
+                                        font-size: 16px; 
+                                    }
+                                }
+                                ul{
+                                    padding:0;
+                                    li{
+                                        color: $blue_bg;
+                                        list-style: none;
+                                        a{
+                                            color: $blue_bg;
+                                            &:hover{
+                                                text-decoration: none;
+                                                color: $orange_bg;
+                                            }
+                                        }
+                                    }
+                                }//ul
+                                .nav-col{
+                                    margin-bottom: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
             .content-in-menu{
                 border-top:1px solid $blue_bg;
                 padding-bottom:18px;
@@ -477,55 +543,7 @@ header{
                 }
 
             }
-            .navbar-default{
-                background:none;
-                font-family: 'opensans';
-                font-size: 16px;
-                border:none;
-                .navbar-nav{
-                    &>li{
-                        border-left:1px solid $light_grey;
 
-                        &>a{
-                            color: $navy_blue_bg;
-                            &:hover{
-                                text-decoration: none;
-                            }
-                        }
-                        .dropdown-menu{
-                            border:none;
-                            background:$navy_blue_bg;
-                            // width: 150%;
-                            // left: -50%;
-                            //  padding:12px 12px 44px 12px;
-                            color: $white_blue;
-                            .nav-col{
-                                .nav-header{
-                                    font-family:'merriweather';
-                                    font-size: 16px; 
-                                }
-                            }
-                            ul{
-                                padding:0;
-                                li{
-                                    color: $blue_bg;
-                                    list-style: none;
-                                    a{
-                                        color: $blue_bg;
-                                        &:hover{
-                                            text-decoration: none;
-                                            color: $orange_bg;
-                                        }
-                                    }
-                                }
-                            }//ul
-                            .nav-col{
-                                margin-bottom: 12px;
-                            }
-                        }
-                    }
-                }
-            }
         }
         // .main-menu{
         //     float: right;
@@ -587,6 +605,9 @@ header{
     width: 100%;
     display: block;
     position:relative;
+    .img-fluid{
+        width: 100%;
+    }
 }
 .carousel-inner > .item > a > img, .carousel-inner > .item > img {
     line-height: 1;
@@ -645,7 +666,7 @@ header{
         h1{
             text-align: center;
         }
-        div.simple-button{
+        a.simple-button{
             display: block;
             margin:30px auto 0 auto;
         }
@@ -759,7 +780,7 @@ header{
             margin: 20px 0 20px 0;
             padding-right: 16px;
             .degree-types{
-                div.button_style_two{
+                a.button_style_two{
                     clear: both;
                     margin:6px auto;
                     display: block;
@@ -774,14 +795,13 @@ header{
                 width: 100%;
             }
             h6{
+                margin:12px;
                 font-size: 14px;
-                margin-left: 10px;
-                margin-right: 10px;
             }
             &:last-of-type{
                 margin-right: none;
             } 
-           div.simple-button{
+           span.simple-button{
                 display: block;
                 clear: both;
                 margin:10px auto;
@@ -799,11 +819,14 @@ img{
 
 /*Short courses section*/
 .feat-container{
-    &>.single-course{
+    .single-course{
         margin-bottom: 12px;
         .short-course{
             .course-heading{
                 margin-left: 12px;
+                margin-top: 12px;
+                font-weight: 500;
+                letter-spacing: 2px;
             }
             &>span{
                 margin-left: 12px;
@@ -815,6 +838,7 @@ img{
     padding:40px 0;
     h2:first-of-type{
         text-align: center;
+        width: 100%;
         margin-top: 0;
         margin-bottom: 40px;
     }
@@ -870,6 +894,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         width: 100%;
         padding-bottom:28px;
         display: inline-block;
+        padding-top:20px;
         // width: 67%;
         // min-width: 790px;
         // float: left;
@@ -935,7 +960,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         }
         .diploma-posts-feat{
             max-width: auto;
-            div.simple-button{
+            a.simple-button{
                 float:right;
                 margin-top:36px;
             }
@@ -969,7 +994,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
                         }
                     }
                 }
-                div.action_button{
+                a.action_button{
                     display: block;
                     float: right;
                     margin-top:50px;
@@ -985,9 +1010,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
             overflow: hidden;
             box-sizing: content-box;
             margin-bottom: 6px;
-            width: 148px;
+            width: 140px;
             height: 134px;
-            padding:0 7px;
+            float: left;
+            padding:0 6px;
             // &:first-of-type{
             //     margin-left: 6px;
             // }
@@ -1011,7 +1037,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
                 bottom:0;
                 left: 0;
                 right: 0;
-                width: 148px;
+                width: 140px;
                 height: 134px;
                 display: block;
                 .feat-post-head{
@@ -1041,10 +1067,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         padding:0;
         position:relative;
         background:#d9d9d9;
+        .carousel-indicators{
+            overflow: hidden;
+        }
         .carousel{
             position:absolute;
             width: 100%;
             height: 100%;
+            overflow: hidden;
+            .carouselExampleIndicators{
+                overflow: hidden!important;
+            }
         }
         ol{
             li{
@@ -1053,8 +1086,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         }
     }
     .library-perk{
+        padding-left:40px;
+        padding-right:40px;
         background:$test_color;
-        div.widget_button{
+        h3:first-of-type{
+            margin-top: 12px;
+        }
+
+        span.widget_button{
             &:hover{
                 text-decoration: none;
                 font-weight: normal;
@@ -1073,13 +1112,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         p{
             font-size: 14px;
             font-family: 'opensans-light';
-            margin-bottom: 40px;
+            margin-bottom: 18px;
         }
     }
     .fee-perk{
         color: #ffffff;
         background:#d4a421;
-        div.widget_button{
+        span.widget_button{
             margin-top: 8px;
             &:hover{
                 text-decoration: none;
@@ -1095,7 +1134,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         p{
             font-size: 16px;
             font-family: 'opensans-light';
-            margin-bottom:60px;
+            margin-bottom:40px;
         }
         .guarantee-icon{
             img{width: 120px;}
@@ -1125,7 +1164,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         background-position: center top, center;
         background-repeat: no-repeat;
         text-align: center;
-        padding:2px 70px;
+        padding:24px 24px;
+        background-size:100%;
         h1{
             color: #ffffff;
             font-family: 'opensans-light','sans-serif';
@@ -1156,11 +1196,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
     .subscribe-section{
         padding:30px 0;
         padding-bottom:0;
+        text-align: center;
+        span.input-group-btn{
+            height: 50px;
+        }
+        button.subscription_button{
+            height: 50px;
+            width: 162px;
+            display: inline;
+            // box-sizing:border-box;
+        }
         b{
             margin-right: 40px;
+            line-height: 50px;
         }
         input{
-            width: 600px;
+            // box-sizing:border-box;
+            width: 570px;
+            height: 50px;
+            border:1px solid $dark_orange_bg;
             &:focus,&:active{
                 box-shadow:0 2px 2px $orange_bg;
                 border:1px solid $dark_orange_bg;
@@ -1175,7 +1229,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', end
         padding-bottom:30px;
         border-bottom:1px solid $white_blue;
         text-align: center;
-        div.widget_button{
+        a.widget_button{
             margin-left: auto;
             margin-right: auto;
         }
@@ -1336,7 +1390,7 @@ footer{
     color: #ffffff;
     background: $navy_blue_bg;
 }
-.centered{
+.centered,.widget_button.centered{
     margin-left: auto;
     margin-right: auto;
     float: none;

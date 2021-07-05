@@ -3,7 +3,7 @@
 
 
 
-@media ($small_mobile_screen){
+@media ($very_small_screen){
 	.entry-content{
 		.welcome-sec{
 			max-width: 100%;
@@ -214,8 +214,14 @@
 			.simple-main-menu{
 				.navbar-default{
 					.navbar-nav{
+						li.dropdown.show{
+							padding-left:0;
+							padding-right:0;
+						}
 						&>li{
 							.dropdown-menu{
+							font-size: 14px;
+							position:relative;
 							width: 100%;
 							left: 0;
 							}
@@ -256,7 +262,7 @@
 		font-size: 14px!important;
 		.navbar-nav{
 			&>li{
-				float: left;
+				float: none!important;
 				&>a{
 					padding:10px;
 				}
@@ -305,6 +311,20 @@
 	        }
 	    }
 	    .subscribe-section{
+	    	div.input-group{
+	    		div.label-cont{
+		    		b{
+		    			// width: 100%;
+		    			line-height: 24px!important;
+		    		}	    			
+	    		}
+
+	    		button.subscription_button{
+	    			padding:0;
+	    			margin:0;
+	    		}
+	    	}
+
 	    	input{
 	    		width: auto;
 	    	}
@@ -316,9 +336,15 @@
 	//footer
 	footer{
 		.footer-widget{
+			width: auto;
+			float: left;
+			margin-right: 6px;
+			&:last-of-type{
+				margin-right: 0;
+			}
 			&#testimonials{
 				max-width: 255px;
-				width: 255px;
+				width: 100%;
 			}
 		}
 	}
@@ -331,7 +357,7 @@
 
 }
 /*Extra Small Devices*/
-@media screen and ($verysmall_screen) {
+@media screen and ($small_screen) {
 	.entry-content{
 		.welcome-sec{
 			max-width: 100%;
@@ -343,6 +369,11 @@
 			.welcome-sec-content{
 				max-width: 100%;
 			}
+		}
+	}
+	.slider-main{
+		.distinct-container{
+			display: none;
 		}
 	}
 	.webinars-sec{
@@ -373,16 +404,36 @@
 	        }
 	    }
 	    .subscribe-section{
+	    	div.input-group{
+	    		div.label-cont{
+		    		b{
+		    			// width: 100%;
+		    			line-height: 24px!important;
+		    		}	    			
+	    		}
+
+	    	}
 	    	input{
 	    		width: auto;
+	    	}
+	    	button,.subscription_button{
+	    		height: 48px;
+				line-height: inherit; 
+				// margin:6px 0;
 	    	}
 	    }
 	}
 	footer{
 		.footer-widget{
+			width: auto;
+			float: left;
+			margin-right: 6px;
+			&:last-of-type{
+				margin-right: 0;
+			}
 			&#testimonials{
 				max-width: 255px;
-				width: 255px;
+				width: 100%;
 			}
 		}
 	}
@@ -390,7 +441,7 @@
 		font-size: 14px!important;
 		.navbar-nav{
 			&>li{
-				float: none;
+				float: none!important;
 				&>a{
 					padding:10px;
 				}
@@ -410,9 +461,15 @@
 			.simple-main-menu{
 				.navbar-default{
 					.navbar-nav{
+						li.dropdown.show{
+							padding-left:0;
+							padding-right:0;
+						}
 						&>li{
 							.dropdown-menu{
+							font-size: 14px;
 							width: 100%;
+							position:relative;
 							left: 0;
 							}
 						}
@@ -429,11 +486,40 @@
 	}
 }
 /*Small devices and tablets*/
-@media screen and ($small_screen) {
+@media screen and ($medium_screen) {
+	.entry-content{
+		.welcome-sec{
+			text-align:left;
+		}
+	}
+	footer{
+		.footer-widget{
+			width: auto;
+			float: none;
+			margin-right: 0;
+			&:last-of-type{
+				margin-right: 0;
+			}
+			&#testimonials{
+				max-width: 255px;
+				width: 100%;
+			}
+		}
+	}
+	.slider-main{
+		.distinct-container{
+			display: block;
+		}
+	}
 	.webinars-sec{
 		background:none;
 		.diploma-section{
 			background:#f8f8f8;
+			.diploma-posts-feat{
+				div.simple-button{
+					margin-right: 138px;
+				}
+			}
 		}
 		.gqmc-section{
 			background: #fdf5da;
@@ -448,9 +534,14 @@
 			.simple-main-menu{
 				.navbar-default{
 					.navbar-nav{
+						li.dropdown.show{
+							padding-left:10px;
+							padding-right:10px;
+						}
 						&>li{
 							.dropdown-menu{
 							width: 100%;
+							position:absolute;
 							left: 0;
 							}
 						}
@@ -459,9 +550,38 @@
 			}
 		}
 	}
+	.navbar-default{
+		font-size: 16px!important;
+		.navbar-nav{
+			&>li{
+				float: left!important;
+				&>a{
+					padding:10px;
+				}
+			}
+		}
+	}
+			/*Call to action section*/
+	.call-to-action{
+	    .subscribe-section{
+	    	div.input-group{
+	    		div.label-cont{
+		    		b{
+		    			// width: 100%;
+		    			line-height: 24px!important;
+		    		}	    			
+	    		}
+
+	    	}
+	    	input{
+	    		width: 570px;
+	    		// margin:6px 0;
+	    	}
+	    }
+	}
 }
 /*Medium devices and tablets*/
-@media screen and ($medium_screen) {
+@media screen and ($large_screen) {
 	.webinars-sec{
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f8f8+0,f8f8f8+61,fdf5da+62,fdf5da+100 */
 		background: #f8f8f8; /* Old browsers */
@@ -484,8 +604,8 @@
 					.navbar-nav{
 						&>li{
 							.dropdown-menu{
-							width: 150%;
-							left: -50%;
+							width: 100%;
+							left: 0;
 							}
 						}
 					}
@@ -504,7 +624,7 @@
 	}  
 }
 /*Large Devices devices and tablets*/
-@media screen and ($large_screen) {
+@media screen and ($xlarge_screen) {
 	header{
 		.main-bar{
 			.simple-main-menu{
@@ -512,8 +632,8 @@
 					.navbar-nav{
 						&>li{
 							.dropdown-menu{
-							width: 150%;
-							left: -50%;
+							width: 140%;
+							left: -40%;
 							}
 						}
 					}

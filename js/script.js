@@ -15,6 +15,6 @@ $(document).ready(function(){
 	});
 
 	$('.nav-handler').on("click",function(){
-		$('.simple-main-menu').toggleClass("hidden-xs");
+		$('.simple-main-menu').toggleClass("hidden-sm-down");
 	});
 });

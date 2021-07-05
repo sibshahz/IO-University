@@ -93,11 +93,10 @@
       var mtotalSlideWidth=null;
       var mdisplayWidth=null;
       var mslidecontainer=$(this).find(msettings.mslidecontainer);
-      console.log("Widht is: ",mslidecontainer.outerWidth());
+
       var mnavContainer=$(this).find(''+msettings.mnavContainer+'');
       var manimationSpeed=msettings.manimationSpeed;
       var msingleSlide=mslidecontainer.find(msettings.msingleSlide);      
-      console.log("IS it "+msettings.mnavContainer);
       console.log(mnavContainer);
       var mnextNav=mnavContainer.find('span.nav-right');
       var mprevNav=mnavContainer.find('span.nav-left');
@@ -114,7 +113,6 @@
       mdisplay.css("margin-left",0);
       mdisplay.css("margin-right",0);
       mdisplay.css("width",mtotalSlideWidth);
-      console.log("Total width is: ",mtotalSlideWidth);
 
       mslidedLeft=0;
 
@@ -144,7 +142,6 @@
       function slideLeft(){
 
         var mpreviousLeft=Math.abs(parseInt(mdisplay.css("margin-left")));
-                console.log("Previous margin left"+mpreviousLeft);
       
         var mdifference=mtotalSlideWidth-mdisplayWidth;
         console.log(mslidedLeft);
